@@ -1,0 +1,39 @@
+/*Menu*/
+.burger {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    height: 15px;
+    width: 3.5vw;
+    direction: rtl;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: menu;
+    cursor: pointer;
+  }
+  
+  .burger .line_above {
+    background: black;
+    height: 1.5px;
+    width: 80%;
+  }
+  
+  .burger .line_below {
+    margin-top: 4px;
+    background: black;
+    height: 2px;
+    width: 100%;
+  }
+  
+  .burger:hover .line_above {
+    width: 100%;
+    -webkit-transition-duration: 400ms;
+            transition-duration: 400ms;
+  }
+  
+  .burger:hover .line_below {
+    width: 80%;
+    -webkit-transition-duration: 400ms;
+            transition-duration: 400ms;
+  }
+  

@@ -1,0 +1,46 @@
+.Arrow {
+    position: fixed;
+    bottom: 10vh;
+    left: 1vw;
+  }
+  
+  .Arrow h1 {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 200;
+  }
+  
+  .Arrow div:last-child {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  
+  .Arrow div:last-child div {
+    display: block;
+    background: black;
+    width: 1px;
+    height: 20px;
+    -webkit-animation: transformation1 2s ease-in-out infinite alternate;
+            animation: transformation1 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes transformation1 {
+    from {
+      background: black;
+    }
+    to {
+      background: white;
+    }
+  }
+  
+  @keyframes transformation1 {
+    from {
+      background: black;
+    }
+    to {
+      background: white;
+    }
+  }

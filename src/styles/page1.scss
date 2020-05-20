@@ -1,0 +1,108 @@
+@font-face{
+    font-family: RobotoSlab;
+    src: url(/public/fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+@mixin RobotoSlab($size, $textcolor, $weight) {
+    font-family: 'Roboto Slab', serif;
+    font-size: $size;
+    color: $textcolor;
+    font-weight: $weight;
+}
+.Page1{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    ". . menu"
+    "main main svg"
+    " footer footer footer"
+    ;
+}
+html{
+    font-size: 10px;
+}
+
+
+/*Greeting*/
+.Greeting{
+    grid-area: main;
+    margin-left: 5vw;
+    h1{
+        @include RobotoSlab(6rem,#2F2E41, 300 )
+        
+    }
+    .text2 h2{
+        @include RobotoSlab(3rem, #504e4e, 200 );
+    }
+}
+/*Svg*/
+.Svg{
+    grid-area: svg;
+    width: 500px;
+    height: 350.92px;
+    margin-right: 10vw;
+    #CircleGrey path{
+        animation: Circles 20s ease-in-out infinite alternate;
+    }
+    #Three_Circles path{
+        animation: Circles 20s ease-in-out infinite alternate;
+    }
+   
+    @keyframes Circles{
+        0%{
+            fill:#F2F2F2;
+        }
+        30%{
+            fill: #b9b5df;
+        }
+        60%{
+            fill:#F2F2F2;
+        }
+        100%{
+            fill: #6C63FF;
+        }
+    }
+    #BigPurpleRec path{
+        animation: transformation 2s ease-out infinite alternate;
+    }
+    @keyframes transformation {
+        from{
+            transform: none;
+        }
+        to{
+            transform: translate(-15px, 9px);
+        }
+    }
+
+}
+
+
+
+/*Footer*/
+footer{
+    grid-area: footer;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    a{
+        text-decoration: none;
+        h3{
+            @include RobotoSlab(4rem, black, 200 );
+        }
+        h3::after{
+            content: "";
+            display: block;
+            background: #6C63FF;
+            width: 0rem;
+            height: 5px;
+            transition: 400ms;
+        }
+        h3:hover::after{
+            width: 22rem
+        }
+    }
+    
+    
+}
