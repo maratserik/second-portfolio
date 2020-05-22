@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/arrow.css';
 
-function Arrow(){
+function Arrow(props){
     return(
         <div className = 'Arrow'>
-            <h1>Projects</h1>
+            <h1>{props.text}</h1>
             <div>
                 <div className ="line"/>
             </div>

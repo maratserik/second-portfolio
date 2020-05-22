@@ -10,10 +10,10 @@
 }
 .Page1{
     width: 100vw;
-    height: 100vh;
+    height: 100.5vh;
     display: grid;
     grid-template-areas: 
-    ". . menu"
+    ". . ."
     "main main svg"
     " footer footer footer"
     ;
@@ -27,7 +27,8 @@ html{
 .Greeting{
     grid-area: main;
     margin-left: 5vw;
-    h1{
+    opacity: 1;
+    .hello{
         @include RobotoSlab(6rem,#2F2E41, 300 )
         
     }

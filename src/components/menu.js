@@ -8,7 +8,6 @@ function Menu(){
                 <div className = "line_above"></div>
                 <div className = "line_below"></div>
             </div>
-            
         </nav>
     )
     

@@ -1,8 +1,95 @@
+@font-face{
+    font-family: RobotoSlab;
+    src: url(/public/fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+@mixin RobotoSlab($size, $textcolor, $weight) {
+    font-family: 'Roboto Slab', serif;
+    font-size: $size;
+    color: $textcolor;
+    font-weight: $weight;
+}
+
 .Page2{
     width: 100vw;
-    height: 100vh;
+    height: 100.5vh;
+    display: grid;
+    grid-template-areas: 
+    ". . ."
+    "main main section"
+    " . . ."
+    ;
+    background-image: linear-gradient(270deg, rgba(129, 121, 245, 0.5) 0%, rgba(218, 216, 252, 0.358537) 35.94%, rgba(251, 251, 251, 0.3) 64.06%, rgba(255, 255, 255, 0.5) 100%);;
 }
 html{
     font-size: 10px;
 }
-/*Menu*/
+main{
+    grid-area: main;
+    margin-top: 15vh;
+    margin-left: 9vw;
+    .upper{
+        .upper_text1_container{
+            h2{
+                @include RobotoSlab(2rem,black, 400 )
+            }
+        }
+        .upper_text2_container{
+            h3{
+                @include RobotoSlab(2rem,black, 400 )
+            }
+        }
+    }
+    .below{
+        margin-top: 10vh;
+        margin-left: 2vw;
+        display: flex;
+        h3::after{
+            content: "";
+            display: block;
+            background: #6C63FF;
+            width: 17rem;
+            height: 4px;
+            transition: 400ms;
+        }
+        a{
+            text-decoration: none;
+            @include RobotoSlab(2.2rem,black, 500 );
+        }
+    }
+}
+section{
+    grid-area: section;
+    margin-left: 5vw;
+    .section_image1{
+        div{
+            width: 12vw;
+            height: 15vh;
+            margin-bottom: 7vh;
+            background-size: cover;
+            background-image: url(../images/project3.png);
+            border-radius: 40px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+    .section_image2{
+        div{
+            width: 12vw;
+            height: 15vh;
+            background-size: cover;
+            background-image: url(../images/project2.png);
+            border-radius: 40px;
+            margin-bottom: 7vh;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+    .section_image3{
+        div{
+            width: 12vw;
+            height: 15vh;
+            background-size: cover;
+            background-image: url(../images/project1.png);
+            border-radius: 40px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+}

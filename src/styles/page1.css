@@ -5,10 +5,10 @@
 
 .Page1 {
   width: 100vw;
-  height: 100vh;
+  height: 100.5vh;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". . menu" "main main svg" " footer footer footer";
+      grid-template-areas: ". . ." "main main svg" " footer footer footer";
 }
 
 html {
@@ -22,9 +22,10 @@ html {
   -ms-grid-column-span: 2;
   grid-area: main;
   margin-left: 5vw;
+  opacity: 1;
 }
 
-.Greeting h1 {
+.Greeting .hello {
   font-family: 'Roboto Slab', serif;
   font-size: 6rem;
   color: #2F2E41;
