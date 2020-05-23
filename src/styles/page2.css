@@ -23,7 +23,7 @@ main {
   -ms-grid-column-span: 2;
   grid-area: main;
   margin-top: 15vh;
-  margin-left: 9vw;
+  margin-left: 13vw;
 }
 
 main .upper .upper_text1_container h2 {
@@ -104,4 +104,20 @@ section .section_image3 div {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+/*
+.overlayY{
+    width: 100vw;
+    height: 0vh;
+    background:black;
+    position: fixed;
+    
+}   
+.overlayX{
+    width: 0vw;
+    height: 100vh;
+    background:rgb(255, 255, 255) ;
+    position: fixed;
+    z-index: 2;
+}   */
 /*# sourceMappingURL=page2.css.map */
