@@ -10,7 +10,7 @@
 }
 .Page1{
     width: 100vw;
-    height: 100.5vh;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
     ". . ."
@@ -27,7 +27,6 @@ html{
 .Greeting{
     grid-area: main;
     margin-left: 5vw;
-    opacity: 1;
     .hello{
         @include RobotoSlab(6rem,#2F2E41, 300 )
         
@@ -39,8 +38,7 @@ html{
 /*Svg*/
 .Svg{
     grid-area: svg;
-    width: 500px;
-    height: 350.92px;
+
     margin-right: 10vw;
     #CircleGrey path{
         animation: Circles 20s ease-in-out infinite alternate;
@@ -74,7 +72,10 @@ html{
             transform: translate(-15px, 9px);
         }
     }
-
+    svg{
+        width: 500px;
+        height: 350.92px;
+    }
 }
 
 
@@ -100,23 +101,157 @@ footer{
             transition: 400ms;
         }
         h3:hover::after{
-            width: 22rem
+            width: 100%
         }
     }
     
     
 }
-.overlayY{
-    width: 100vw;
-    height: 0vh;
-    background:black;
-    position: fixed;
+
+
+
+@media (min-width: 3500px){
+    .Greeting{
+        .hello{
+            @include RobotoSlab(15rem,#2F2E41, 300 )
+            
+        }
+        .text2 h2{
+            @include RobotoSlab(7rem, #504e4e, 200 );
+        }
+        
+    }
+    .Svg{
+        margin-top: 5vh; 
+        svg{
+            width: 800px;
+            height: 561.47px;
+        }
+    }
+    footer{
+        a{
+            h3{
+                @include RobotoSlab(12rem, black, 200 );
+            }
+            h3:hover::after{
+                width: 100%
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 1100px) {
+    .Greeting{
+        .hello{
+            @include RobotoSlab(5rem,#2F2E41, 300 )
+            
+        }
+        .text2 h2{
+            @include RobotoSlab(2rem, #504e4e, 200 );
+        }
+    }
+    .Svg{
+        svg{
+            width: 450px;
+            height: 315.83px;
+        }
+    }
+}
+//Ipad Pro
+@media (max-width: 1024px){
     
-}   
-.overlayX{
-    width: 0vw;
-    height: 100vh;
-    background:rgb(255, 255, 255) ;
-    position: fixed;
-    z-index: 2;
-}   
+    .Page1{
+        display: grid;
+        grid-template-areas: 
+        "svg"
+        "main"
+        "footer"
+        ;
+    }
+    .Greeting{
+        margin: 0 auto;
+        line-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .hello{
+            @include RobotoSlab(5rem,#2F2E41, 300 );
+            
+        }
+        .text2 h2{
+            @include RobotoSlab(2rem, #504e4e, 200 );
+        }
+    }
+    .Svg{
+        margin: 10vh auto;
+        width: 400px;
+        height: 280.74px;
+    }
+    footer{
+        margin: 0 auto;
+    }
+}
+//phones
+@media (max-width: 500px){
+    .Svg{
+        display: flex;
+        justify-content: center;
+        
+        svg{
+            width: 230px;
+            height: 161.42px;  
+        }
+    }
+    .Greeting{
+        margin-bottom: 10vh;
+    }
+    footer{
+        margin-bottom: 15vh;
+    }
+}
+//smaller phones
+@media (max-width: 415px){
+    .Svg{
+        margin-bottom: -5vh;
+    }
+    .Greeting{
+        margin-bottom: 5vh;
+        
+        .hello{
+            @include RobotoSlab(3.5rem,#2F2E41, 300 );
+            
+        }
+        .text2 h2{
+            @include RobotoSlab(1.5rem, #504e4e, 200 );
+        }
+    }
+    footer{
+        a{
+            h3{
+                @include RobotoSlab(2.5rem, #504e4e, 200 );
+            }
+        }
+        
+    }
+}
+@media (max-width: 375px){
+   
+    .Svg{
+        margin-right: -15vw;
+        margin-bottom: -6vh;
+        svg{
+            margin-right: 20vw;
+            width: 200px;
+            height: 140.37px;
+        }
+    }
+    .Greeting{
+        margin-left: 20vw;
+        line-height: 18px;
+    }
+    footer{
+        margin-left: 30vw;
+    }
+}

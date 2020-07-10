@@ -119,8 +119,7 @@ html {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 40px 40px;
-      grid-template-rows: 40px 40px;
+  grid-row-gap: 30px;
 }
 
 .technologies .frontend .techsF span {
@@ -158,8 +157,7 @@ html {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 40px;
-      grid-template-rows: 40px;
+  grid-row-gap: 30px;
 }
 
 .technologies .mobile .techsM span {
@@ -185,23 +183,22 @@ html {
   font-weight: 100;
 }
 
-.technologies .backend .titleB h3 {
+.technologies .other .titleB h3 {
   font-family: 'Roboto Slab', serif;
   font-size: 2rem;
   color: black;
   font-weight: 100;
 }
 
-.technologies .backend .techsB {
+.technologies .other .techsB {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 40px;
-      grid-template-rows: 40px;
+  grid-row-gap: 30px;
 }
 
-.technologies .backend .techsB div {
+.technologies .other .techsB div {
   width: 8vw;
   height: 3.5vh;
   border-radius: 20px;
@@ -217,25 +214,354 @@ html {
           align-items: center;
 }
 
-.technologies .backend .techsB div h3 {
+.technologies .other .techsB div h3 {
   font-family: 'Roboto Slab', serif;
   font-size: 1.7rem;
   color: black;
   font-weight: 100;
 }
 
-.text_under_footer {
-  position: fixed;
-  bottom: -120px;
-  right: -120px;
-  -webkit-transform: rotate(-14deg);
-          transform: rotate(-14deg);
+@media (min-width: 3500px) {
+  .text_near_Image h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 7rem;
+    color: black;
+    font-weight: 100;
+  }
+  .myImage {
+    margin-top: 6vh;
+    width: 500px;
+    height: 500px;
+  }
+  .technologies .text_under_section h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .titleF h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .techsF span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .titleM h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .techsM span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .titleB h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .techsB div h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: black;
+    font-weight: 100;
+  }
 }
 
-.text_under_footer h1 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 11rem;
-  color: #C4C4C4;
-  font-weight: 100;
+@media (max-width: 1100px) {
+  .text_near_Image {
+    width: 80vw;
+  }
+  .text_near_Image h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .Page3 {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: ". . main . . " ". . section . ." ". footer footer footer .";
+  }
+  .bubbles {
+    -ms-grid-columns: 70px 70px;
+        grid-template-columns: 70px 70px;
+    right: 6vw;
+    top: -16vh;
+  }
+  .bubbles div {
+    margin-bottom: 4vh;
+  }
+  .myImage {
+    margin-top: 10vh;
+    margin-bottom: -10vh;
+    margin-left: 25vw;
+  }
+  .technologies {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  .technologies .frontend .techsF span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .techsM span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .techsB div h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 800px) {
+  .bubbles {
+    top: -18vh;
+  }
+  .myImage {
+    margin-bottom: -15vh;
+    margin-left: 20vw;
+  }
+  .technologies .text_under_section h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .techsF span {
+    width: 11vw;
+  }
+  .technologies .mobile .techsM span {
+    width: 12vw;
+  }
+  .technologies .mobile .techsM span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .techsB div {
+    width: 11vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .text_near_Image {
+    margin-left: 11vw;
+  }
+  .text_near_Image h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.4rem;
+    color: black;
+    font-weight: 100;
+  }
+  .myImage {
+    margin-bottom: -20vh;
+    margin-left: 25vw;
+    width: 210px;
+    height: 210px;
+  }
+  .technologies {
+    margin-left: 10vw;
+  }
+  .technologies .text_under_section h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .techsF {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .technologies .frontend .techsF span {
+    width: 15vw;
+  }
+  .technologies .frontend .techsF span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .techsM {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .technologies .mobile .techsM span {
+    width: 15vw;
+  }
+  .technologies .mobile .techsM span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .techsB {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .technologies .other .techsB div {
+    width: 15vw;
+  }
+  .technologies .other .techsB div h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 420px) {
+  .bubbles {
+    display: none;
+  }
+  .myImage {
+    margin-top: 6vh;
+    width: 140px;
+    height: 140px;
+  }
+  .technologies {
+    margin-left: 15vw;
+    margin-bottom: 10vh;
+  }
+  .technologies .text_under_section {
+    margin-left: -5vw;
+  }
+  .technologies .text_under_section h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .titleF {
+    margin-bottom: 10px;
+  }
+  .technologies .frontend .titleF h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .techsF span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .titleM {
+    margin-bottom: 10px;
+  }
+  .technologies .mobile .titleM h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .techsM span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .titleB {
+    margin-bottom: 10px;
+  }
+  .technologies .other .titleB h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .techsB div h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+  }
+  .text_near_Image {
+    margin-left: 11vw;
+  }
+  .text_near_Image h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 340px) {
+  .text_near_Image h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies {
+    margin-left: 17vw;
+  }
+  .technologies .text_under_section {
+    margin-left: 0vw;
+  }
+  .technologies .text_under_section h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .titleF h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .frontend .techsF span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .titleM h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .mobile .techsM span h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .titleB h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+  .technologies .other .techsB div h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 100;
+  }
 }
 /*# sourceMappingURL=page3.css.map */

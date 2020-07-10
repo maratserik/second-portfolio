@@ -9,11 +9,11 @@ function App() {
   return(
     <Router>
       <div>
-        <Switch>
-          <Route path = "/" exact component = {Page1} />
-          <Route path = "/projects" component = {Page2} />
-          <Route path = "/about" component = {Page3} />
-        </Switch>
+          <Switch>
+            <Route path = "/" exact component = {Page1} />
+            <Route path = "/projects" component = {Page2} />
+            <Route path = "/about" component = {Page3} />
+          </Switch>
       </div>
     </Router>
   )

@@ -2,48 +2,23 @@ import React, {Component} from 'react';
 import '../styles/page2.css';
 import Menu from "./menu"
 import Arrow from "./arrow"
+import Showcase from "./showcase"
 import { Tween } from 'react-gsap';
-import { gsap } from 'gsap';
+
 
 class Page2 extends Component{
     constructor(props){
         super(props)
         this.state = {
-            scroll: 0,
-            arrow: 'About'
+            arrow: 'Home'
         }
         
-        //this.myRef = React.createRef();
-        //this.myRef2 = React.createRef();
+        
     }
-    /*
-    componentWillMount(){
-        
-        const div1 = this.myRef
-        const div2 = this.myRef2
-        
-        window.addEventListener("scroll", function(){
-            gsap.to(div1.current, 0.1, {
-                height: "100vh"
-            })
-            gsap.to(div2.current, 0.1, {
-                width: '100vw',
-                delay: 1
-            })
-            gsap.to(div2.current, 0.1, {
-                width: '0vw',
-                delay: 2
-            })
-            gsap.to(div1.current, 0.3, {
-                height: "0vh",
-                delay: 3
-            })
-            
-        })
-    }*/
     render(){
+        
         return(
-            <div className = 'Page2'>
+            <div className = 'Page2'  >
                 <Menu/>
                 <main>
                     <Tween
@@ -66,38 +41,42 @@ class Page2 extends Component{
                                     in my Github account bellow
                                 </h3>
                             </div>
+                            <div className = "below">
+                                <h3><a href = "https://github.com/Maracrasava">CHECK GITHUB</a></h3>
+                            </div>
                         </div>
-                        <div className = "below">
-                            <h3><a href = "">CHECK GITHUB</a></h3>
-                        </div>
+                        
                     </Tween>
                 </main>
+                
                 <Tween
-                        from = {{opacity: 0, y: 60}}
+                        from = {{opacity: 0, y: -60}}
                         to = {{opacity:1, y: 0}}
                         duration = {1.5}
                         stagger = {0.3}
                         
                 >
                     <section>
-                        <a href ="" className = "section_image1">
+                        <a href ="" className = "section_image1 section_image">
                             <div></div>
                         </a > 
-                        <a href ="" className = "section_image2">
+                        <a href ="" className = "section_image2 section_image">
                             <div></div>
                         </a>
-                        <a href ="" className = "section_image3">
+                        <a href ="" className = "section_image3 section_image">
                             <div></div>
                         </a>
                         
                     </section>
                 </Tween>
 
-
-                <Arrow text = {this.state.arrow}/>
                 
+                <a href = "/"><Arrow text = {this.state.arrow}/></a>
+                <Showcase/>
             </div>
         )
+        
+        
     }
 }
 

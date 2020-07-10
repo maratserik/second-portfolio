@@ -2,6 +2,7 @@
     position: fixed;
     bottom: 10vh;
     left: 1vw;
+    height: 10vh;
   }
   
   .Arrow h1 {
@@ -11,6 +12,7 @@
     font-size: 1.6rem;
     color: black;
     font-weight: 200;
+    
   }
   
   .Arrow div:last-child {
@@ -44,3 +46,28 @@
       background: white;
     }
   }
+
+@media(min-width:3500px){
+  .Arrow h1{
+    font-size: 4rem;
+  }
+  .Arrow div:last-child div{
+    width: 3px;
+    height: 60px;
+  }
+}
+@media(max-width){
+  .Arrow h1 {
+    font-size: 2rem;
+  }
+}
+@media(max-width:500px){
+  .Arrow h1{
+    font-size: 1.2rem;
+  }
+}
+@media(max-width:330px){
+  .Arrow h1{
+    font-size: 1rem;
+  }
+}

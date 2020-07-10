@@ -3,12 +3,21 @@
   src: url(/public/fonts/RobotoSlab-VariableFont_wght.ttf);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .Page2 {
   width: 100vw;
-  height: 100.5vh;
+  height: 150vh;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". . ." "main main section" " . . .";
+      grid-template-areas: ". main main section ." ". showcase showcase showcase .";
+  -ms-grid-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+      grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+  -ms-grid-rows: 0.5fr 0.5fr 1fr 1fr;
+      grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+  overflow-x: hidden;
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(129, 121, 245, 0.5)), color-stop(35.94%, rgba(218, 216, 252, 0.358537)), color-stop(64.06%, rgba(251, 251, 251, 0.3)), to(rgba(255, 255, 255, 0.5)));
   background-image: linear-gradient(270deg, rgba(129, 121, 245, 0.5) 0%, rgba(218, 216, 252, 0.358537) 35.94%, rgba(251, 251, 251, 0.3) 64.06%, rgba(255, 255, 255, 0.5) 100%);
 }
@@ -18,12 +27,19 @@ html {
 }
 
 main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: main;
-  margin-top: 15vh;
-  margin-left: 13vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-left: 7vw;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 main .upper .upper_text1_container h2 {
@@ -41,8 +57,6 @@ main .upper .upper_text2_container h3 {
 }
 
 main .below {
-  margin-top: 10vh;
-  margin-left: 2vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,58 +80,260 @@ main .below a {
   font-weight: 500;
 }
 
+main .below a:hover {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.2rem;
+  color: #666666;
+  font-weight: 500;
+}
+
 section {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   grid-area: section;
-  margin-left: 5vw;
+  margin-top: 15vh;
+}
+
+section .section_image div {
+  width: 12vw;
+  height: 15vh;
+  background-size: cover;
+  border-radius: 40px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 section .section_image1 div {
-  width: 12vw;
-  height: 15vh;
   margin-bottom: 7vh;
-  background-size: cover;
   background-image: url(../images/project3.png);
-  border-radius: 40px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 section .section_image2 div {
-  width: 12vw;
-  height: 15vh;
-  background-size: cover;
   background-image: url(../images/project2.png);
-  border-radius: 40px;
   margin-bottom: 7vh;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 section .section_image3 div {
-  width: 12vw;
-  height: 15vh;
-  background-size: cover;
   background-image: url(../images/project1.png);
-  border-radius: 40px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/*
-.overlayY{
-    width: 100vw;
-    height: 0vh;
-    background:black;
-    position: fixed;
-    
-}   
-.overlayX{
-    width: 0vw;
-    height: 100vh;
-    background:rgb(255, 255, 255) ;
-    position: fixed;
-    z-index: 2;
-}   */
+.showcase {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: showcase;
+  width: 80vw;
+  margin-top: 25vh;
+}
+
+.showcase .title {
+  margin-bottom: 5vw;
+}
+
+.showcase .title h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.6rem;
+  color: black;
+  font-weight: 400;
+}
+
+.showcase .Project {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.3fr 1fr;
+      grid-template-columns: 0.3fr 1fr;
+}
+
+.showcase .Project .left_column div:first-child a {
+  text-decoration: none;
+}
+
+.showcase .Project .left_column div:first-child a h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 300;
+}
+
+.showcase .Project .right_column h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  color: black;
+  font-weight: 100;
+}
+
+@media (min-width: 3500px) {
+  main .upper .upper_text1_container h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 6rem;
+    color: black;
+    font-weight: 400;
+  }
+  main .upper .upper_text2_container {
+    margin-bottom: 5vh;
+  }
+  main .upper .upper_text2_container h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 6rem;
+    color: black;
+    font-weight: 400;
+  }
+  main .below h3::after {
+    width: 100%;
+  }
+  main .below a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 5rem;
+    color: black;
+    font-weight: 500;
+  }
+  .showcase .title h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: 400;
+  }
+  .showcase .Project .left_column div:first-child h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.8rem;
+    color: black;
+    font-weight: 300;
+  }
+  .showcase .Project .right_column h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.5rem;
+    color: black;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 1400px) {
+  section .section_image div {
+    width: 15vw;
+    height: 15vh;
+  }
+  .showcase {
+    margin-top: 35vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Page2 {
+        grid-template-areas: "main" "section" "showcase";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.5fr 0.5fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr;
+    background: -webkit-gradient(linear, left bottom, left top, from(#8179F5), color-stop(35.94%, rgba(218, 216, 252, 0.717073)), color-stop(64.06%, rgba(251, 251, 251, 0.6)), to(#FFFFFF));
+    background: linear-gradient(0deg, #8179F5 0%, rgba(218, 216, 252, 0.717073) 35.94%, rgba(251, 251, 251, 0.6) 64.06%, #FFFFFF 100%);
+  }
+  main {
+    margin-left: 35vw;
+    margin-top: 20vh;
+  }
+  main .upper .upper_text1_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .below {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 10vw;
+  }
+  section .section_image div {
+    width: 20vw;
+    height: 15vh;
+  }
+  .showcase {
+    margin-left: 5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    margin-left: 30vw;
+  }
+  .showcase {
+    margin-left: 10vw;
+  }
+  .showcase .Project .left_column {
+    margin-right: 15vw;
+  }
+  .showcase .Project .left_column div:first-child h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: black;
+    font-weight: 300;
+  }
+  .showcase .Project .right_column h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.3rem;
+    color: black;
+    font-weight: 100;
+  }
+  .showcase .Project2 .left_column, .showcase .Project3 .left_column {
+    margin-right: 10vw;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    margin-left: 15vw;
+  }
+  .showcase .Project {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .showcase .Project .left_column h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.3rem;
+    color: black;
+    font-weight: 300;
+  }
+  .showcase .Project .right_column h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.7rem;
+    color: black;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 330px) {
+  main {
+    margin-left: 7vw;
+  }
+  section .section_image div {
+    width: 20vw;
+    height: 10vh;
+  }
+  .showcase {
+    margin-left: 13vw;
+  }
+  .showcase .Project .left_column div:first-child h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    color: black;
+    font-weight: 300;
+  }
+  .showcase .Project .right_column h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+  }
+}
 /*# sourceMappingURL=page2.css.map */
